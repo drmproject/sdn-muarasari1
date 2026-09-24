@@ -6,6 +6,32 @@ const year = document.getElementById('year');
 const progressBar = document.getElementById('progressBar');
 const toTop = document.getElementById('toTop');
 
+const logoAsset = 'assets/img/logo-base64.txt';
+
+const applySchoolLogo = (dataUri) => {
+  document.querySelectorAll('.brand__logo').forEach((el) => {
+    el.style.background = `url('${dataUri}') center/cover no-repeat, linear-gradient(135deg, var(--primary), var(--primary-2))`;
+    el.style.color = 'transparent';
+    el.style.textIndent = '-9999px';
+    el.style.overflow = 'hidden';
+    el.setAttribute('aria-label', 'Logo SD Negeri Muarasari 1');
+    el.setAttribute('role', 'img');
+  });
+
+  let icon = document.querySelector("link[rel='icon']");
+  if (!icon) {
+    icon = document.createElement('link');
+    icon.rel = 'icon';
+    document.head.appendChild(icon);
+  }
+  icon.href = dataUri;
+};
+
+fetch(logoAsset)
+  .then((response) => response.text())
+  .then((base64) => applySchoolLogo(`data:image/webp;base64,${base64.trim()}`))
+  .catch(() => {});
+
 if (year) year.textContent = new Date().getFullYear();
 
 window.addEventListener('load', () => {
