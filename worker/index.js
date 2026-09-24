@@ -16,11 +16,7 @@ export default {
     }
 
     if (url.pathname === "/api/health") {
-      return json({
-        ok: true,
-        service: "SDN Muarasari 1 API",
-        status: "running",
-      });
+      return json({ ok: true, service: "SDN Muarasari 1 API", status: "running" });
     }
 
     if (url.pathname === "/api/site") {
@@ -39,40 +35,45 @@ export default {
     }
 
     if (url.pathname === "/api/content" && request.method === "GET") {
-      return json({
-        success: true,
-        data: [],
-        message: "Content list ready",
-      });
+      if (env.DB) {
+        const result = await env.DB.prepare(
+          "SELECT * FROM content ORDER BY created_at DESC"
+        ).all();
+
+        return json({ success: true, data: result.results });
+      }
+
+      return json({ success: true, data: [], mode: "fallback" });
     }
 
     if (url.pathname === "/api/content" && request.method === "POST") {
       const body = await request.json().catch(() => null);
 
-      if (!body) {
-        return json({
-          success: false,
-          message: "Data konten tidak valid",
-        }, 400);
+      if (!body?.title || !body?.type) {
+        return json({ success: false, message: "title dan type wajib diisi" }, 400);
       }
 
-      return json({
-        success: true,
-        message: "Konten siap disimpan ke database",
-        data: body,
-      }, 201);
+      if (env.DB) {
+        await env.DB.prepare(
+          "INSERT INTO content (type,title,body,image) VALUES (?,?,?,?)"
+        )
+          .bind(body.type, body.title, body.body || "", body.image || "")
+          .run();
+      }
+
+      return json({ success: true, data: body }, 201);
     }
 
     if (url.pathname.startsWith("/api/content/") && request.method === "DELETE") {
-      return json({
-        success: true,
-        message: "Konten siap dihapus",
-      });
+      const id = url.pathname.split("/").pop();
+
+      if (env.DB) {
+        await env.DB.prepare("DELETE FROM content WHERE id = ?").bind(id).run();
+      }
+
+      return json({ success: true, message: "Konten dihapus" });
     }
 
-    return json({
-      success: false,
-      message: "Endpoint tidak ditemukan",
-    }, 404);
+    return json({ success: false, message: "Endpoint tidak ditemukan" }, 404);
   },
 };
