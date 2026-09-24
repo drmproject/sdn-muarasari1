@@ -1,0 +1,7 @@
+name = "sdn-muarasari1-api"
+main = "worker/index.js"
+compatibility_date = "2026-09-24"
+
+[vars]
+SCHOOL_NAME = "SD Negeri Muarasari 1"
+NPSN = "20220471"
