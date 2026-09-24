@@ -11,7 +11,7 @@ const logoAsset = `${assetPrefix}assets/img/logo-base64.txt`;
 
 const applySchoolLogo = (dataUri) => {
   document.querySelectorAll('.brand__logo').forEach((el) => {
-    el.innerHTML = `<img src="${dataUri}" alt="Logo SD Negeri Muarasari 1">`;
+    el.innerHTML = `<img src="${dataUri}" alt="Logo SD Negeri Muarasari 1" loading="eager" decoding="async">`;
     el.setAttribute('aria-label', 'Logo SD Negeri Muarasari 1');
     el.setAttribute('role', 'img');
   });
@@ -27,7 +27,10 @@ const applySchoolLogo = (dataUri) => {
 
 fetch(logoAsset)
   .then((response) => response.text())
-  .then((base64) => applySchoolLogo(`data:image/webp;base64,${base64.trim()}`))
+  .then((base64) => {
+    const trimmed = base64.trim();
+    if (trimmed) applySchoolLogo(`data:image/webp;base64,${trimmed}`);
+  })
   .catch(() => {});
 
 if (year) year.textContent = new Date().getFullYear();
@@ -65,7 +68,8 @@ themeBtn?.addEventListener('click', () => {
 });
 
 window.addEventListener('scroll', () => {
-  const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+  const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+  const scrolled = maxScroll > 0 ? (window.scrollY / maxScroll) * 100 : 0;
   if (progressBar) progressBar.style.width = `${Math.min(100, scrolled)}%`;
   if (toTop) toTop.classList.toggle('is-visible', window.scrollY > 450);
 });
