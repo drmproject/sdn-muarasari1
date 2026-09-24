@@ -1,12 +1,70 @@
 <!doctype html>
 <html lang="id" data-theme="light">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Profil resmi SD Negeri Muarasari 1.">
   <title>Profil - SD Negeri Muarasari 1</title>
+  <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="assets/css/style.css">
   <script defer src="assets/js/app.js"></script>
 </head>
 <body>
-  <header class="site-header"><nav class="nav container"><a class="brand" href="index.html"><span class="brand__logo">SM1</span><span><strong>SD Negeri Muarasari 1</strong><small>Profil Sekolah</small></span></a></nav></header>
-  <main class="section container"><div class="card reveal is-visible"><h1>Profil Sekolah</h1><p>Halaman profil sekolah akan diisi dengan sejarah, visi misi, struktur organisasi, dan data kelembagaan.</p><p><a class="btn btn--primary" href="index.html">Kembali ke Beranda</a></p></div></main>
-</body></html>
+  <div class="progress-bar" id="progressBar"></div>
+  <div class="loader" id="loader"><div class="loader__ring"></div><div class="loader__text">SD Negeri Muarasari 1</div></div>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="index.html"><span class="brand__logo">SM1</span><span><strong>SD Negeri Muarasari 1</strong><small>Profil Sekolah</small></span></a>
+      <button class="nav__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+      <div class="nav__links" id="navLinks">
+        <a href="index.html#profil">Profil</a>
+        <a href="index.html#berita">Berita</a>
+        <a href="pengumuman.html">Pengumuman</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="ppdb.html">PPDB</a>
+        <a href="kontak.html">Kontak</a>
+        <button class="theme-btn" id="themeBtn" type="button" aria-label="Ubah tema">☾</button>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="section container">
+      <div class="section__head reveal is-visible">
+        <span class="section__kicker">Profil Sekolah</span>
+        <h2>Identitas, visi, dan arah layanan sekolah</h2>
+      </div>
+      <div class="cards cards--profile">
+        <article class="card reveal is-visible">
+          <h3>Identitas</h3>
+          <ul class="list">
+            <li><span>Nama</span><strong>SD Negeri Muarasari 1</strong></li>
+            <li><span>NPSN</span><strong>20220471</strong></li>
+            <li><span>Jenjang</span><strong>Sekolah Dasar</strong></li>
+            <li><span>Status</span><strong>Negeri</strong></li>
+            <li><span>Akreditasi</span><strong>B</strong></li>
+          </ul>
+        </article>
+        <article class="card reveal is-visible">
+          <h3>Sejarah Singkat</h3>
+          <p>SD Negeri Muarasari 1 melayani pendidikan dasar bagi masyarakat sekitar dengan fokus pada karakter, disiplin, literasi, dan prestasi siswa.</p>
+          <h3>Visi</h3>
+          <p>Terwujudnya peserta didik yang berkarakter, disiplin, berprestasi, beriman, dan berwawasan lingkungan.</p>
+          <h3>Misi</h3>
+          <ol class="list list--ordered">
+            <li>Menanamkan nilai karakter dan budaya disiplin.</li>
+            <li>Meningkatkan prestasi akademik dan nonakademik.</li>
+            <li>Mewujudkan pembelajaran aktif, kreatif, dan menyenangkan.</li>
+          </ol>
+        </article>
+        <article class="card reveal is-visible">
+          <h3>Sambutan</h3>
+          <p>Website ini menjadi pusat informasi resmi sekolah untuk memudahkan komunikasi, transparansi, dan layanan pendidikan kepada orang tua dan masyarakat.</p>
+          <a class="btn btn--primary" href="kontak.html">Hubungi Sekolah</a>
+        </article>
+      </div>
+    </section>
+  </main>
+  <button class="to-top" id="toTop" aria-label="Kembali ke atas">↑</button>
+  <footer class="footer"><div class="container footer__grid"><div><strong>SD Negeri Muarasari 1</strong><p>Website resmi sekolah.</p></div><div><strong>Menu</strong><p><a href="index.html">Beranda</a> · <a href="guru.html">Guru</a> · <a href="ppdb.html">PPDB</a></p></div><div><strong>Copyright</strong><p>© <span id="year"></span> SD Negeri Muarasari 1</p></div></div></footer>
+</body>
+</html>
