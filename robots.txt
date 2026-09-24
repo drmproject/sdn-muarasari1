@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://drmproject.github.io/sdn-muarasari1/sitemap.xml
