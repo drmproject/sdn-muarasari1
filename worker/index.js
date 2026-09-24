@@ -25,8 +25,8 @@ export default {
 
     if (url.pathname === "/api/site") {
       return json({
-        name: "SD Negeri Muarasari 1",
-        npsn: "20220471",
+        name: env.SCHOOL_NAME || "SD Negeri Muarasari 1",
+        npsn: env.NPSN || "20220471",
         city: "Kota Bogor",
       });
     }
@@ -38,11 +38,35 @@ export default {
       });
     }
 
-    if (url.pathname.startsWith("/api/content")) {
+    if (url.pathname === "/api/content" && request.method === "GET") {
       return json({
         success: true,
         data: [],
-        message: "Content API foundation ready",
+        message: "Content list ready",
+      });
+    }
+
+    if (url.pathname === "/api/content" && request.method === "POST") {
+      const body = await request.json().catch(() => null);
+
+      if (!body) {
+        return json({
+          success: false,
+          message: "Data konten tidak valid",
+        }, 400);
+      }
+
+      return json({
+        success: true,
+        message: "Konten siap disimpan ke database",
+        data: body,
+      }, 201);
+    }
+
+    if (url.pathname.startsWith("/api/content/") && request.method === "DELETE") {
+      return json({
+        success: true,
+        message: "Konten siap dihapus",
       });
     }
 
