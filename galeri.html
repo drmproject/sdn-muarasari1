@@ -1,25 +1,27 @@
 <!doctype html>
-<html lang="id">
+<html lang="id" data-theme="light">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Galeri kegiatan SD Negeri Muarasari 1.">
   <title>Galeri | SD Negeri Muarasari 1</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css"><script defer src="assets/js/app.js"></script>
 </head>
 <body>
-  <main class="page-section">
-    <div class="container">
-      <div class="section-title"><span>Dokumentasi</span><h1>Galeri</h1></div>
-      <div class="grid cards-3 gallery-grid">
-        <div class="gallery-item">Kegiatan belajar mengajar</div>
-        <div class="gallery-item">Upacara bendera</div>
-        <div class="gallery-item">Ekstrakurikuler</div>
-        <div class="gallery-item">Prestasi siswa</div>
-        <div class="gallery-item">Kunjungan edukasi</div>
-        <div class="gallery-item">Perayaan hari besar</div>
+  <div class="progress-bar" id="progressBar"></div><div class="loader" id="loader"><div class="loader__ring"></div><div class="loader__text">SD Negeri Muarasari 1</div></div>
+  <header class="site-header"><nav class="nav container"><a class="brand" href="index.html"><span class="brand__logo">SM1</span><span><strong>SD Negeri Muarasari 1</strong><small>Galeri Sekolah</small></span></a><button class="nav__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">☰</button><div class="nav__links" id="navLinks"><a href="profil.html">Profil</a><a href="guru.html">Guru</a><a href="berita.html">Berita</a><a href="pengumuman.html">Pengumuman</a><a href="galeri.html">Galeri</a><a href="ppdb.html">PPDB</a><a href="kontak.html">Kontak</a><button class="theme-btn" id="themeBtn" type="button" aria-label="Ubah tema">☾</button></div></nav></header>
+  <main>
+    <section class="section container">
+      <div class="section__head reveal is-visible"><span class="section__kicker">Dokumentasi</span><h2>Galeri kegiatan sekolah</h2></div>
+      <div class="gallery">
+        <div class="gallery__item reveal is-visible">Kegiatan belajar mengajar</div>
+        <div class="gallery__item reveal is-visible">Upacara bendera</div>
+        <div class="gallery__item reveal is-visible">Ekstrakurikuler</div>
+        <div class="gallery__item reveal is-visible">Prestasi siswa</div>
+        <div class="gallery__item reveal is-visible">Kunjungan edukasi</div>
+        <div class="gallery__item reveal is-visible">Perayaan hari besar</div>
       </div>
-    </div>
+    </section>
   </main>
-  <script src="assets/js/app.js"></script>
+  <button class="to-top" id="toTop" aria-label="Kembali ke atas">↑</button><footer class="footer"><div class="container footer__grid"><div><strong>SD Negeri Muarasari 1</strong><p>Website resmi sekolah.</p></div><div><strong>Menu</strong><p><a href="index.html">Beranda</a> · <a href="ppdb.html">PPDB</a> · <a href="kontak.html">Kontak</a></p></div><div><strong>Copyright</strong><p>© <span id="year"></span> SD Negeri Muarasari 1</p></div></div></footer>
 </body>
 </html>
