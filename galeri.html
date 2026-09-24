@@ -1,27 +1,62 @@
 <!doctype html>
 <html lang="id" data-theme="light">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Galeri kegiatan SD Negeri Muarasari 1.">
+  <meta name="theme-color" content="#0f4c81">
   <title>Galeri | SD Negeri Muarasari 1</title>
-  <link rel="stylesheet" href="assets/css/style.css"><script defer src="assets/js/app.js"></script>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/app.js"></script>
 </head>
 <body>
-  <div class="progress-bar" id="progressBar"></div><div class="loader" id="loader"><div class="loader__ring"></div><div class="loader__text">SD Negeri Muarasari 1</div></div>
-  <header class="site-header"><nav class="nav container"><a class="brand" href="index.html"><span class="brand__logo">SM1</span><span><strong>SD Negeri Muarasari 1</strong><small>Galeri Sekolah</small></span></a><button class="nav__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">☰</button><div class="nav__links" id="navLinks"><a href="profil.html">Profil</a><a href="guru.html">Guru</a><a href="berita.html">Berita</a><a href="pengumuman.html">Pengumuman</a><a href="galeri.html">Galeri</a><a href="ppdb.html">PPDB</a><a href="kontak.html">Kontak</a><button class="theme-btn" id="themeBtn" type="button" aria-label="Ubah tema">☾</button></div></nav></header>
-  <main>
-    <section class="section container">
-      <div class="section__head reveal is-visible"><span class="section__kicker">Dokumentasi</span><h2>Galeri kegiatan sekolah</h2></div>
-      <div class="gallery">
-        <div class="gallery__item reveal is-visible">Kegiatan belajar mengajar</div>
-        <div class="gallery__item reveal is-visible">Upacara bendera</div>
-        <div class="gallery__item reveal is-visible">Ekstrakurikuler</div>
-        <div class="gallery__item reveal is-visible">Prestasi siswa</div>
-        <div class="gallery__item reveal is-visible">Kunjungan edukasi</div>
-        <div class="gallery__item reveal is-visible">Perayaan hari besar</div>
+  <div class="progress-bar" id="progressBar"></div>
+  <div class="loader" id="loader" aria-hidden="true"><div class="loader__ring"></div><div class="loader__text">SD Negeri Muarasari 1</div></div>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="index.html"><span class="brand__logo brand__logo--header">SM1</span><span><strong>SD Negeri Muarasari 1</strong><small>Galeri Sekolah</small></span></a>
+      <button class="nav__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+      <div class="nav__links" id="navLinks">
+        <a href="index.html#profil">Profil</a>
+        <a href="guru.html">Guru</a>
+        <a href="berita.html">Berita</a>
+        <a href="pengumuman.html">Pengumuman</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="ppdb.html">PPDB</a>
+        <a href="kontak.html">Kontak</a>
+        <button class="theme-btn" id="themeBtn" type="button" aria-label="Ubah tema">☾</button>
       </div>
-    </section>
+    </nav>
+  </header>
+
+  <main class="page-section">
+    <div class="container">
+      <div class="section-title reveal is-visible">
+        <span>Dokumentasi</span>
+        <h1>Galeri kegiatan sekolah</h1>
+        <p>Potret singkat aktivitas sekolah yang menggambarkan suasana belajar, kegiatan rutin, dan momen penting warga sekolah.</p>
+      </div>
+
+      <div class="grid gallery-grid">
+        <div class="gallery-item reveal is-visible">Kegiatan belajar mengajar</div>
+        <div class="gallery-item reveal is-visible">Upacara bendera</div>
+        <div class="gallery-item reveal is-visible">Ekstrakurikuler</div>
+        <div class="gallery-item reveal is-visible">Prestasi siswa</div>
+        <div class="gallery-item reveal is-visible">Kunjungan edukasi</div>
+        <div class="gallery-item reveal is-visible">Perayaan hari besar</div>
+      </div>
+    </div>
   </main>
-  <button class="to-top" id="toTop" aria-label="Kembali ke atas">↑</button><footer class="footer"><div class="container footer__grid"><div><strong>SD Negeri Muarasari 1</strong><p>Website resmi sekolah.</p></div><div><strong>Menu</strong><p><a href="index.html">Beranda</a> · <a href="ppdb.html">PPDB</a> · <a href="kontak.html">Kontak</a></p></div><div><strong>Copyright</strong><p>© <span id="year"></span> SD Negeri Muarasari 1</p></div></div></footer>
+
+  <button class="to-top" id="toTop" aria-label="Kembali ke atas">↑</button>
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div><strong>SD Negeri Muarasari 1</strong><p>Website resmi sekolah.</p></div>
+      <div><strong>Menu</strong><p><a href="index.html">Beranda</a> · <a href="ppdb.html">PPDB</a> · <a href="kontak.html">Kontak</a></p></div>
+      <div><strong>Copyright</strong><p>© <span id="year"></span> SD Negeri Muarasari 1</p></div>
+    </div>
+  </footer>
 </body>
 </html>
