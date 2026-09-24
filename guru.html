@@ -1,37 +1,27 @@
 <!doctype html>
-<html lang="id">
+<html lang="id" data-theme="light">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Data guru dan tenaga kependidikan SD Negeri Muarasari 1.">
   <title>Guru & Tendik | SD Negeri Muarasari 1</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/app.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav-wrap">
-      <a class="brand" href="index.html">SDN Muarasari 1</a>
-      <nav class="nav-links">
-        <a href="profil.html">Profil</a>
-        <a href="guru.html" class="active">Guru</a>
-        <a href="berita.html">Berita</a>
-        <a href="pengumuman.html">Pengumuman</a>
-        <a href="galeri.html">Galeri</a>
-        <a href="ppdb.html">PPDB</a>
-        <a href="kontak.html">Kontak</a>
-      </nav>
-    </div>
-  </header>
-  <main class="page-section">
-    <div class="container">
-      <div class="section-title"><span>Tenaga Pendidik</span><h1>Guru & Tendik</h1><p>Data guru dan tenaga kependidikan dapat diperbarui dari dashboard admin.</p></div>
-      <div class="grid cards-4">
-        <article class="card person-card"><div class="avatar">KS</div><h3>Kepala Sekolah</h3><p>NIP: -</p><p>Penanggung jawab utama layanan pendidikan.</p></article>
-        <article class="card person-card"><div class="avatar">WK</div><h3>Waka Kurikulum</h3><p>NIP: -</p><p>Mengelola perangkat pembelajaran dan jadwal.</p></article>
-        <article class="card person-card"><div class="avatar">BG</div><h3>Guru Kelas</h3><p>NIP: -</p><p>Mengampu pembelajaran utama di kelas.</p></article>
-        <article class="card person-card"><div class="avatar">TU</div><h3>Tata Usaha</h3><p>NIP: -</p><p>Administrasi sekolah dan layanan umum.</p></article>
+  <div class="progress-bar" id="progressBar"></div>
+  <div class="loader" id="loader"><div class="loader__ring"></div><div class="loader__text">SD Negeri Muarasari 1</div></div>
+  <header class="site-header"><nav class="nav container"><a class="brand" href="index.html"><span class="brand__logo">SM1</span><span><strong>SD Negeri Muarasari 1</strong><small>Guru & Tendik</small></span></a><button class="nav__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">☰</button><div class="nav__links" id="navLinks"><a href="profil.html">Profil</a><a href="guru.html">Guru</a><a href="berita.html">Berita</a><a href="pengumuman.html">Pengumuman</a><a href="galeri.html">Galeri</a><a href="ppdb.html">PPDB</a><a href="kontak.html">Kontak</a><button class="theme-btn" id="themeBtn" type="button" aria-label="Ubah tema">☾</button></div></nav></header>
+  <main>
+    <section class="section container">
+      <div class="section__head reveal is-visible"><span class="section__kicker">Tenaga Pendidik</span><h2>Guru & Tenaga Kependidikan</h2></div>
+      <div class="cards cards--news">
+        <article class="card reveal is-visible"><h3>Kepala Sekolah</h3><p>Penanggung jawab utama layanan pendidikan dan pengembangan sekolah.</p></article>
+        <article class="card reveal is-visible"><h3>Guru Kelas</h3><p>Mengampu pembelajaran utama di kelas dan pembinaan karakter siswa.</p></article>
+        <article class="card reveal is-visible"><h3>Tata Usaha</h3><p>Mengelola administrasi sekolah dan layanan umum.</p></article>
       </div>
-    </div>
+    </section>
   </main>
-  <script src="assets/js/app.js"></script>
+  <button class="to-top" id="toTop" aria-label="Kembali ke atas">↑</button>
+  <footer class="footer"><div class="container footer__grid"><div><strong>SD Negeri Muarasari 1</strong><p>Website resmi sekolah.</p></div><div><strong>Menu</strong><p><a href="index.html">Beranda</a> · <a href="profil.html">Profil</a> · <a href="ppdb.html">PPDB</a></p></div><div><strong>Copyright</strong><p>© <span id="year"></span> SD Negeri Muarasari 1</p></div></div></footer>
 </body>
 </html>
