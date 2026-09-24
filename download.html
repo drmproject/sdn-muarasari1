@@ -1,21 +1,69 @@
 <!doctype html>
-<html lang="id">
+<html lang="id" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Unduhan dokumen resmi SD Negeri Muarasari 1.">
   <title>Download | SD Negeri Muarasari 1</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/app.js"></script>
 </head>
 <body>
+  <div class="progress-bar" id="progressBar"></div>
+  <div class="loader" id="loader" aria-hidden="true"><div class="loader__ring"></div><div class="loader__text">SD Negeri Muarasari 1</div></div>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="index.html" aria-label="SD Negeri Muarasari 1 beranda">
+        <span class="brand__logo brand__logo--header">SM1</span>
+        <span><strong>SD Negeri Muarasari 1</strong><small>Download Dokumen</small></span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+      <div class="nav__links" id="navLinks">
+        <a href="profil.html">Profil</a><a href="guru.html">Guru</a><a href="berita.html">Berita</a><a href="pengumuman.html">Pengumuman</a><a href="galeri.html">Galeri</a><a href="ppdb.html">PPDB</a><a href="kontak.html">Kontak</a><button class="theme-btn" id="themeBtn" type="button" aria-label="Ubah tema">☾</button>
+      </div>
+    </nav>
+  </header>
+
   <main class="page-section">
     <div class="container">
-      <div class="section-title"><span>Dokumen Sekolah</span><h1>Download</h1></div>
+      <div class="section-title reveal is-visible">
+        <span>Dokumen Sekolah</span>
+        <h1>Download</h1>
+        <p>Dokumen penting yang bisa disiapkan atau dibagikan kepada orang tua dan peserta didik.</p>
+      </div>
+
       <div class="grid cards-2">
-        <section class="card"><h3>Formulir PPDB</h3><p>Unduh dokumen pendaftaran peserta didik baru.</p><a class="text-link" href="#">Unduh PDF</a></section>
-        <section class="card"><h3>Kalender Pendidikan</h3><p>Jadwal kegiatan akademik selama satu tahun.</p><a class="text-link" href="#">Unduh PDF</a></section>
+        <section class="card reveal is-visible">
+          <h3>Formulir PPDB</h3>
+          <p>Unduh dokumen pendaftaran peserta didik baru untuk persiapan berkas administrasi.</p>
+          <a class="btn btn--primary" href="#">Unduh PDF</a>
+        </section>
+        <section class="card reveal is-visible">
+          <h3>Kalender Pendidikan</h3>
+          <p>Jadwal kegiatan akademik selama satu tahun pelajaran sesuai agenda sekolah.</p>
+          <a class="btn btn--ghost" href="#">Unduh PDF</a>
+        </section>
+        <section class="card reveal is-visible">
+          <h3>Surat Izin / Keterangan</h3>
+          <p>Template surat yang sering dipakai untuk keperluan administrasi dan komunikasi sekolah.</p>
+          <a class="btn btn--ghost" href="#">Unduh PDF</a>
+        </section>
+        <section class="card reveal is-visible">
+          <h3>Jadwal Kegiatan</h3>
+          <p>Daftar kegiatan penting yang bisa dicetak atau disimpan untuk referensi cepat.</p>
+          <a class="btn btn--primary" href="#">Unduh PDF</a>
+        </section>
       </div>
     </div>
   </main>
-  <script src="assets/js/app.js"></script>
+
+  <button class="to-top" id="toTop" aria-label="Kembali ke atas">↑</button>
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div><strong>SD Negeri Muarasari 1</strong><p>Website resmi sekolah.</p></div>
+      <div><strong>Menu</strong><p><a href="index.html">Beranda</a> · <a href="profil.html">Profil</a> · <a href="ppdb.html">PPDB</a></p></div>
+      <div><strong>Copyright</strong><p>© <span id="year"></span> SD Negeri Muarasari 1</p></div>
+    </div>
+  </footer>
 </body>
 </html>
