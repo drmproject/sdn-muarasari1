@@ -9,11 +9,27 @@ const toTop = document.getElementById('toTop');
 const assetPrefix = window.location.pathname.includes('/admin/') ? '../' : '';
 const logoAsset = `${assetPrefix}assets/img/logo-base64.txt`;
 
+const setLogoBox = (el, size, radius, shadow) => {
+  el.style.width = size;
+  el.style.height = size;
+  el.style.borderRadius = radius;
+  el.style.boxShadow = shadow;
+  el.style.padding = '0';
+};
+
 const applySchoolLogo = (dataUri) => {
   document.querySelectorAll('.brand__logo').forEach((el) => {
     el.innerHTML = `<img src="${dataUri}" alt="Logo SD Negeri Muarasari 1" loading="eager" decoding="async">`;
     el.setAttribute('aria-label', 'Logo SD Negeri Muarasari 1');
     el.setAttribute('role', 'img');
+  });
+
+  document.querySelectorAll('.brand__logo--header').forEach((el) => {
+    setLogoBox(el, '48px', '16px', 'var(--shadow)');
+  });
+
+  document.querySelectorAll('.brand__logo--hero').forEach((el) => {
+    setLogoBox(el, '108px', '30px', 'var(--shadow-strong)');
   });
 
   let icon = document.querySelector("link[rel='icon']");
