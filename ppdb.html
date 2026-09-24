@@ -1,15 +1,86 @@
 <!doctype html>
 <html lang="id" data-theme="light">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Informasi PPDB SD Negeri Muarasari 1.">
+  <meta name="theme-color" content="#0f4c81">
   <title>PPDB | SD Negeri Muarasari 1</title>
-  <link rel="stylesheet" href="assets/css/style.css"><script defer src="assets/js/app.js"></script>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/app.js"></script>
 </head>
 <body>
-  <div class="progress-bar" id="progressBar"></div><div class="loader" id="loader"><div class="loader__ring"></div><div class="loader__text">SD Negeri Muarasari 1</div></div>
-  <header class="site-header"><nav class="nav container"><a class="brand" href="index.html"><span class="brand__logo">SM1</span><span><strong>SD Negeri Muarasari 1</strong><small>PPDB</small></span></a><button class="nav__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">☰</button><div class="nav__links" id="navLinks"><a href="profil.html">Profil</a><a href="guru.html">Guru</a><a href="berita.html">Berita</a><a href="pengumuman.html">Pengumuman</a><a href="galeri.html">Galeri</a><a href="ppdb.html">PPDB</a><a href="kontak.html">Kontak</a><button class="theme-btn" id="themeBtn" type="button" aria-label="Ubah tema">☾</button></div></nav></header>
-  <main><section class="section container"><div class="section__head reveal is-visible"><span class="section__kicker">Penerimaan Siswa</span><h2>PPDB</h2></div><div class="cards cards--profile"><article class="card reveal is-visible"><h3>Persyaratan</h3><ul class="list"><li>Fotokopi KK</li><li>Fotokopi akta kelahiran</li><li>Pas foto sesuai ketentuan</li></ul></article><article class="card reveal is-visible"><h3>Alur Pendaftaran</h3><ol class="list list--ordered"><li>Isi formulir</li><li>Verifikasi berkas</li><li>Pengumuman hasil</li></ol></article><article class="card reveal is-visible"><h3>Kontak</h3><p>Silakan hubungi sekolah untuk informasi jadwal dan berkas yang dibutuhkan.</p><a class="btn btn--primary" href="kontak.html">Hubungi Sekolah</a></article></div></section></main>
-  <button class="to-top" id="toTop" aria-label="Kembali ke atas">↑</button><footer class="footer"><div class="container footer__grid"><div><strong>SD Negeri Muarasari 1</strong><p>Website resmi sekolah.</p></div><div><strong>Menu</strong><p><a href="index.html">Beranda</a> · <a href="profil.html">Profil</a> · <a href="kontak.html">Kontak</a></p></div><div><strong>Copyright</strong><p>© <span id="year"></span> SD Negeri Muarasari 1</p></div></div></footer>
+  <div class="progress-bar" id="progressBar"></div>
+  <div class="loader" id="loader" aria-hidden="true"><div class="loader__ring"></div><div class="loader__text">SD Negeri Muarasari 1</div></div>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="index.html">
+        <span class="brand__logo brand__logo--header">SM1</span>
+        <span><strong>SD Negeri Muarasari 1</strong><small>PPDB</small></span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+      <div class="nav__links" id="navLinks">
+        <a href="index.html#profil">Profil</a>
+        <a href="guru.html">Guru</a>
+        <a href="berita.html">Berita</a>
+        <a href="pengumuman.html">Pengumuman</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="ppdb.html">PPDB</a>
+        <a href="kontak.html">Kontak</a>
+        <button class="theme-btn" id="themeBtn" type="button" aria-label="Ubah tema">☾</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-section">
+    <div class="container">
+      <div class="section-title reveal is-visible">
+        <span>Penerimaan Siswa Baru</span>
+        <h1>PPDB</h1>
+        <p>Ringkasan persyaratan, alur pendaftaran, dan kontak sekolah untuk calon peserta didik baru.</p>
+      </div>
+
+      <div class="grid cards-3">
+        <article class="card reveal is-visible">
+          <div class="avatar">SY</div>
+          <h3>Persyaratan</h3>
+          <ul class="list">
+            <li><span>KK</span><strong>Fotokopi</strong></li>
+            <li><span>Akta</span><strong>Fotokopi</strong></li>
+            <li><span>Foto</span><strong>Sesuai ketentuan</strong></li>
+          </ul>
+        </article>
+
+        <article class="card reveal is-visible">
+          <div class="avatar">AL</div>
+          <h3>Alur Pendaftaran</h3>
+          <ol class="list list--ordered">
+            <li>Ambil informasi pendaftaran.</li>
+            <li>Isi formulir dan serahkan berkas.</li>
+            <li>Verifikasi administrasi.</li>
+            <li>Pengumuman hasil seleksi.</li>
+          </ol>
+        </article>
+
+        <article class="card reveal is-visible">
+          <div class="avatar">KT</div>
+          <h3>Kontak</h3>
+          <p>Silakan hubungi sekolah untuk informasi jadwal, kuota, dan berkas yang harus disiapkan.</p>
+          <a class="btn btn--primary" href="kontak.html">Hubungi Sekolah</a>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <button class="to-top" id="toTop" aria-label="Kembali ke atas">↑</button>
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div><strong>SD Negeri Muarasari 1</strong><p>Website resmi sekolah.</p></div>
+      <div><strong>Menu</strong><p><a href="index.html">Beranda</a> · <a href="profil.html">Profil</a> · <a href="kontak.html">Kontak</a></p></div>
+      <div><strong>Copyright</strong><p>© <span id="year"></span> SD Negeri Muarasari 1</p></div>
+    </div>
+  </footer>
 </body>
 </html>
