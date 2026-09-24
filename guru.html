@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="id" data-theme="light">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Data guru dan tenaga kependidikan SD Negeri Muarasari 1.">
   <title>Guru & Tendik | SD Negeri Muarasari 1</title>
   <link rel="stylesheet" href="assets/css/style.css">
@@ -9,19 +10,85 @@
 </head>
 <body>
   <div class="progress-bar" id="progressBar"></div>
-  <div class="loader" id="loader"><div class="loader__ring"></div><div class="loader__text">SD Negeri Muarasari 1</div></div>
-  <header class="site-header"><nav class="nav container"><a class="brand" href="index.html"><span class="brand__logo">SM1</span><span><strong>SD Negeri Muarasari 1</strong><small>Guru & Tendik</small></span></a><button class="nav__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">☰</button><div class="nav__links" id="navLinks"><a href="profil.html">Profil</a><a href="guru.html">Guru</a><a href="berita.html">Berita</a><a href="pengumuman.html">Pengumuman</a><a href="galeri.html">Galeri</a><a href="ppdb.html">PPDB</a><a href="kontak.html">Kontak</a><button class="theme-btn" id="themeBtn" type="button" aria-label="Ubah tema">☾</button></div></nav></header>
-  <main>
-    <section class="section container">
-      <div class="section__head reveal is-visible"><span class="section__kicker">Tenaga Pendidik</span><h2>Guru & Tenaga Kependidikan</h2></div>
-      <div class="cards cards--news">
-        <article class="card reveal is-visible"><h3>Kepala Sekolah</h3><p>Penanggung jawab utama layanan pendidikan dan pengembangan sekolah.</p></article>
-        <article class="card reveal is-visible"><h3>Guru Kelas</h3><p>Mengampu pembelajaran utama di kelas dan pembinaan karakter siswa.</p></article>
-        <article class="card reveal is-visible"><h3>Tata Usaha</h3><p>Mengelola administrasi sekolah dan layanan umum.</p></article>
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__ring"></div>
+    <div class="loader__text">SD Negeri Muarasari 1</div>
+  </div>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="index.html" aria-label="SD Negeri Muarasari 1 beranda">
+        <span class="brand__logo brand__logo--header">SM1</span>
+        <span>
+          <strong>SD Negeri Muarasari 1</strong>
+          <small>Guru & Tendik</small>
+        </span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+      <div class="nav__links" id="navLinks">
+        <a href="profil.html">Profil</a>
+        <a href="guru.html">Guru</a>
+        <a href="berita.html">Berita</a>
+        <a href="pengumuman.html">Pengumuman</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="ppdb.html">PPDB</a>
+        <a href="kontak.html">Kontak</a>
+        <button class="theme-btn" id="themeBtn" type="button" aria-label="Ubah tema">☾</button>
       </div>
-    </section>
+    </nav>
+  </header>
+
+  <main class="page-section">
+    <div class="container">
+      <div class="section-title reveal is-visible">
+        <span>Tenaga Pendidik</span>
+        <h1>Guru & Tenaga Kependidikan</h1>
+        <p>Struktur layanan sekolah yang mendukung pembelajaran, administrasi, dan pembinaan peserta didik.</p>
+      </div>
+
+      <div class="grid cards-2" style="margin-bottom:18px;">
+        <article class="card reveal is-visible">
+          <h3>Fokus utama</h3>
+          <p>Tim sekolah menangani pembelajaran kelas, administrasi, dan pembinaan karakter dengan koordinasi yang rapi.</p>
+        </article>
+        <article class="card reveal is-visible">
+          <h3>Catatan</h3>
+          <p>Data guru dan tenaga kependidikan dapat diperbarui dari dashboard admin saat CMS sekolah aktif penuh.</p>
+        </article>
+      </div>
+
+      <div class="grid cards-4">
+        <article class="card person-card reveal is-visible">
+          <div class="avatar">KS</div>
+          <h3>Kepala Sekolah</h3>
+          <p>Penanggung jawab utama layanan pendidikan dan pengembangan sekolah.</p>
+        </article>
+        <article class="card person-card reveal is-visible">
+          <div class="avatar">WK</div>
+          <h3>Waka Kurikulum</h3>
+          <p>Mengatur jadwal, perangkat pembelajaran, dan pelaksanaan kurikulum.</p>
+        </article>
+        <article class="card person-card reveal is-visible">
+          <div class="avatar">GK</div>
+          <h3>Guru Kelas</h3>
+          <p>Mengampu pembelajaran utama dan pembinaan karakter siswa di kelas.</p>
+        </article>
+        <article class="card person-card reveal is-visible">
+          <div class="avatar">TU</div>
+          <h3>Tata Usaha</h3>
+          <p>Mengelola administrasi sekolah dan layanan surat-menyurat.</p>
+        </article>
+      </div>
+    </div>
   </main>
+
   <button class="to-top" id="toTop" aria-label="Kembali ke atas">↑</button>
-  <footer class="footer"><div class="container footer__grid"><div><strong>SD Negeri Muarasari 1</strong><p>Website resmi sekolah.</p></div><div><strong>Menu</strong><p><a href="index.html">Beranda</a> · <a href="profil.html">Profil</a> · <a href="ppdb.html">PPDB</a></p></div><div><strong>Copyright</strong><p>© <span id="year"></span> SD Negeri Muarasari 1</p></div></div></footer>
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div><strong>SD Negeri Muarasari 1</strong><p>Website resmi sekolah.</p></div>
+      <div><strong>Menu</strong><p><a href="index.html">Beranda</a> · <a href="profil.html">Profil</a> · <a href="ppdb.html">PPDB</a></p></div>
+      <div><strong>Copyright</strong><p>© <span id="year"></span> SD Negeri Muarasari 1</p></div>
+    </div>
+  </footer>
 </body>
 </html>
