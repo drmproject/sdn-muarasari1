@@ -1,2 +1,74 @@
 <!doctype html>
-<html lang="id" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Berita - SD Negeri Muarasari 1</title><link rel="stylesheet" href="assets/css/style.css"><script defer src="assets/js/app.js"></script></head><body><header class="site-header"><nav class="nav container"><a class="brand" href="index.html"><span class="brand__logo">SM1</span><span><strong>SD Negeri Muarasari 1</strong><small>Berita Sekolah</small></span></a></nav></header><main class="section container"><div class="card reveal is-visible"><h1>Berita Sekolah</h1><p>Halaman ini menampilkan berita, artikel, dan dokumentasi kegiatan sekolah.</p><p><a class="btn btn--primary" href="index.html">Kembali ke Beranda</a></p></div></main></body></html>
+<html lang="id" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Berita sekolah resmi SD Negeri Muarasari 1.">
+  <meta name="theme-color" content="#0f4c81">
+  <title>Berita - SD Negeri Muarasari 1</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/app.js"></script>
+</head>
+<body>
+  <div class="progress-bar" id="progressBar"></div>
+  <div class="loader" id="loader" aria-hidden="true"><div class="loader__ring"></div><div class="loader__text">SD Negeri Muarasari 1</div></div>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="index.html">
+        <span class="brand__logo brand__logo--header">SM1</span>
+        <span><strong>SD Negeri Muarasari 1</strong><small>Berita Sekolah</small></span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+      <div class="nav__links" id="navLinks">
+        <a href="index.html#profil">Profil</a>
+        <a href="guru.html">Guru</a>
+        <a href="berita.html">Berita</a>
+        <a href="pengumuman.html">Pengumuman</a>
+        <a href="galeri.html">Galeri</a>
+        <a href="ppdb.html">PPDB</a>
+        <a href="kontak.html">Kontak</a>
+        <button class="theme-btn" id="themeBtn" type="button" aria-label="Ubah tema">☾</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-section">
+    <div class="container">
+      <div class="section-title reveal is-visible">
+        <span>Publikasi Sekolah</span>
+        <h1>Berita dan informasi kegiatan</h1>
+        <p>Berisi kabar terbaru, dokumentasi singkat, dan informasi kegiatan yang penting untuk dipantau warga sekolah.</p>
+      </div>
+
+      <div class="grid cards-3">
+        <article class="card reveal is-visible">
+          <div class="avatar">01</div>
+          <h3>Pembiasaan Pagi</h3>
+          <p>Kegiatan rutin untuk menanamkan disiplin, salam, doa, dan literasi singkat sebelum pelajaran dimulai.</p>
+        </article>
+        <article class="card reveal is-visible">
+          <div class="avatar">02</div>
+          <h3>Prestasi Siswa</h3>
+          <p>Prestasi akademik dan nonakademik siswa menjadi bagian penting dari laporan kegiatan sekolah.</p>
+        </article>
+        <article class="card reveal is-visible">
+          <div class="avatar">03</div>
+          <h3>Lingkungan Sekolah</h3>
+          <p>Program kebersihan, penghijauan, dan penataan ruang belajar dilakukan secara berkala agar nyaman dipakai.</p>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <button class="to-top" id="toTop" aria-label="Kembali ke atas">↑</button>
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div><strong>SD Negeri Muarasari 1</strong><p>Website resmi sekolah.</p></div>
+      <div><strong>Menu</strong><p><a href="index.html">Beranda</a> · <a href="profil.html">Profil</a> · <a href="kontak.html">Kontak</a></p></div>
+      <div><strong>Copyright</strong><p>© <span id="year"></span> SD Negeri Muarasari 1</p></div>
+    </div>
+  </footer>
+</body>
+</html>
