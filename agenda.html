@@ -1,22 +1,64 @@
 <!doctype html>
-<html lang="id">
+<html lang="id" data-theme="light">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Agenda dan kalender kegiatan SD Negeri Muarasari 1.">
   <title>Agenda | SD Negeri Muarasari 1</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/app.js"></script>
 </head>
 <body>
+  <div class="progress-bar" id="progressBar"></div>
+  <div class="loader" id="loader" aria-hidden="true"><div class="loader__ring"></div><div class="loader__text">SD Negeri Muarasari 1</div></div>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="index.html" aria-label="SD Negeri Muarasari 1 beranda">
+        <span class="brand__logo brand__logo--header">SM1</span>
+        <span><strong>SD Negeri Muarasari 1</strong><small>Agenda Sekolah</small></span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+      <div class="nav__links" id="navLinks">
+        <a href="profil.html">Profil</a><a href="guru.html">Guru</a><a href="berita.html">Berita</a><a href="pengumuman.html">Pengumuman</a><a href="galeri.html">Galeri</a><a href="ppdb.html">PPDB</a><a href="kontak.html">Kontak</a><button class="theme-btn" id="themeBtn" type="button" aria-label="Ubah tema">☾</button>
+      </div>
+    </nav>
+  </header>
+
   <main class="page-section">
     <div class="container">
-      <div class="section-title"><span>Kalender Kegiatan</span><h1>Agenda</h1></div>
-      <div class="timeline">
+      <div class="section-title reveal is-visible">
+        <span>Kalender Kegiatan</span>
+        <h1>Agenda</h1>
+        <p>Rangkaian kegiatan sekolah yang membantu orang tua dan siswa mengikuti jadwal penting dengan lebih mudah.</p>
+      </div>
+
+      <div class="grid cards-2" style="margin-bottom:18px;">
+        <article class="card reveal is-visible">
+          <h3>Jadwal ringkas</h3>
+          <p>Agenda ini memuat kegiatan pembelajaran, asesmen, dan program sekolah yang berjalan selama semester aktif.</p>
+        </article>
+        <article class="card reveal is-visible">
+          <h3>Catatan</h3>
+          <p>Jika ada perubahan jadwal, informasi resmi akan diumumkan melalui papan pengumuman dan kanal sekolah.</p>
+        </article>
+      </div>
+
+      <div class="timeline reveal is-visible">
         <div class="timeline-item"><h3>Pembukaan Tahun Ajaran</h3><p>Awal kegiatan pembelajaran dan penyusunan jadwal kelas.</p></div>
         <div class="timeline-item"><h3>ANBK</h3><p>Pelaksanaan asesmen nasional sesuai jadwal sekolah.</p></div>
-        <div class="timeline-item"><h3>Class Meeting</h3><p>Kegiatan penguatan karakter dan kebersamaan siswa.</p></div>
+        <div class="timeline-item"><h3>Class Meeting</h3><p>Kegiatan penguatan karakter, kebersamaan, dan sportivitas siswa.</p></div>
+        <div class="timeline-item"><h3>Pembagian Rapor</h3><p>Penyampaian hasil belajar sesuai kalender akademik dan jadwal wali kelas.</p></div>
       </div>
     </div>
   </main>
-  <script src="assets/js/app.js"></script>
+
+  <button class="to-top" id="toTop" aria-label="Kembali ke atas">↑</button>
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div><strong>SD Negeri Muarasari 1</strong><p>Website resmi sekolah.</p></div>
+      <div><strong>Menu</strong><p><a href="index.html">Beranda</a> · <a href="profil.html">Profil</a> · <a href="ppdb.html">PPDB</a></p></div>
+      <div><strong>Copyright</strong><p>© <span id="year"></span> SD Negeri Muarasari 1</p></div>
+    </div>
+  </footer>
 </body>
 </html>
