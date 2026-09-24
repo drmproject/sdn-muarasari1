@@ -6,14 +6,12 @@ const year = document.getElementById('year');
 const progressBar = document.getElementById('progressBar');
 const toTop = document.getElementById('toTop');
 
-const logoAsset = 'assets/img/logo-base64.txt';
+const assetPrefix = window.location.pathname.includes('/admin/') ? '../' : '';
+const logoAsset = `${assetPrefix}assets/img/logo-base64.txt`;
 
 const applySchoolLogo = (dataUri) => {
   document.querySelectorAll('.brand__logo').forEach((el) => {
-    el.style.background = `url('${dataUri}') center/cover no-repeat, linear-gradient(135deg, var(--primary), var(--primary-2))`;
-    el.style.color = 'transparent';
-    el.style.textIndent = '-9999px';
-    el.style.overflow = 'hidden';
+    el.innerHTML = `<img src="${dataUri}" alt="Logo SD Negeri Muarasari 1">`;
     el.setAttribute('aria-label', 'Logo SD Negeri Muarasari 1');
     el.setAttribute('role', 'img');
   });
@@ -106,6 +104,6 @@ counters.forEach((el) => counterObserver.observe(el));
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('sw.js').catch(() => {});
+    navigator.serviceWorker.register(`${assetPrefix}sw.js`).catch(() => {});
   });
 }
