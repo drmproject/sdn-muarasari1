@@ -1,0 +1,16 @@
+{
+  "name": "SD Negeri Muarasari 1",
+  "short_name": "SDN Muarasari 1",
+  "start_url": "/sdn-muarasari1/",
+  "scope": "/sdn-muarasari1/",
+  "display": "standalone",
+  "background_color": "#f4f8fc",
+  "theme_color": "#0f4c81",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='40' fill='%230f4c81'/%3E%3Cpath d='M48 78 96 48l48 30v60H48z' fill='white'/%3E%3Cpath d='M72 108h48v36H72z' fill='%23dff0ff'/%3E%3C/svg%3E",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    }
+  ]
+}
